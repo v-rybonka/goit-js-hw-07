@@ -16,11 +16,7 @@ function createGalleryCards(galleryItems) {
     .join("");
 }
 
-galleryContainer.addEventListener("click", onImageClick);
-
-function onImageClick(evt) {
-  evt.preventDefault();
-
-  let gallery = new SimpleLightbox(".gallery a");
-  gallery.on("show.simplelightbox", function () {});
-}
+new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
+});
